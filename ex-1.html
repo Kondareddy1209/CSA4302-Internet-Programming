@@ -1,0 +1,41 @@
+<html>
+<label></label>
+    <title>Bio Data Form</title>
+</head>
+<body>
+    <h2>BIO-DATA</h2>
+    <form>
+        <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="transgender" name="gender" value="Transgender">
+            <label for="transgender">Transgender</label><br><br>
+            <label for="occupation">Occupation:</label>
+            <select id="occupation" name="occupation">
+                <option value="farmer">Farmer</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="doctor">Doctor</option>
+            </select><br><br>
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="Reading">
+            <label for="reading">Reading</label><br>
+            <input type="checkbox" id="cooking" name="hobbies" value="Cooking">
+            <label for="cooking">Cooking</label><br>
+            <input type="checkbox" id="playing" name="hobbies" value="Playing">
+            <label for="playing">Playing</label><br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,10 @@
+{
+  "name": "John Doe",
+  "bio": "Web Developer and Technology Enthusiast.",
+  "picture": "https://example.com/profile.jpg",
+  "social_links": {
+    "link1": "https://twitter.com/johndoe",
+    "link2": "https://github.com/johndoe",
+    "link3": "https://linkedin.com/in/johndoe"
+  }
+}

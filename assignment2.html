@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Star Game</title>
+    <style>
+        #game-area {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        #star {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-area">
+        <img id="star" src="star.png" alt="Star">
+    </div>
+    <p>Time: <span id="timer">30</span>s</p>
+    <p>Score: <span id="score">0</span></p>
+    
+    <script>
+        const star = document.getElementById('star');
+        const scoreDisplay = document.getElementById('score');
+        const timerDisplay = document.getElementById('timer');
+        
+        let score = 0;
+        let timeLeft = 30;
+        
+        star.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = score;
+            moveStar();
+        });
+
+        function moveStar() {
+            const gameArea = document.getElementById('game-area');
+            const maxX = gameArea.clientWidth - star.offsetWidth;
+            const maxY = gameArea.clientHeight - star.offsetHeight;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+            star.style.left = `${randomX}px`;
+            star.style.top = `${randomY}px`;
+        }
+        
+        function countdown() {
+            if (timeLeft > 0) {
+                timeLeft--;
+                timerDisplay.textContent = timeLeft;
+            } else {
+                alert(`Time's up! Your score is ${score}`);
+                clearInterval(gameInterval);
+            }
+        }
+        
+        const gameInterval = setInterval(countdown, 1000);
+    </script>
+</body>
+</html>

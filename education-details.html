@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Education Details</title>
+    <script>
+        function loadBioData() {
+            // Retrieve the bio-data from localStorage
+            document.getElementById("bio-name").textContent = localStorage.getItem("name");
+            document.getElementById("bio-dob").textContent = localStorage.getItem("dob");
+            document.getElementById("bio-gender").textContent = localStorage.getItem("gender");
+            document.getElementById("bio-occupation").textContent = localStorage.getItem("occupation");
+        }
+    </script>
+</head>
+<body onload="loadBioData()">
+    <h2>Education Details</h2>
+    
+    <!-- Display bio-data from localStorage -->
+    <h3>Your Bio-data:</h3>
+    <p>Name: <span id="bio-name"></span></p>
+    <p>DOB: <span id="bio-dob"></span></p>
+    <p>Gender: <span id="bio-gender"></span></p>
+    <p>Occupation: <span id="bio-occupation"></span></p>
+
+    <form>
+        <table border="1">
+            <tr>
+                <th>Name of the School & College</th>
+                <th>Degree</th>
+                <th>Percentage%</th>
+            </tr>
+            <tr>
+                <td>SSE</td>
+                <td>BE(CSE)</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>Chaitanya</td>
+                <td>Higher Secondary</td>
+                <td>87%</td>
+            </tr>
+            <tr>
+                <td>Holy Angel</td>
+                <td>10th</td>
+                <td>93%</td>
+            </tr>
+        </table><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
